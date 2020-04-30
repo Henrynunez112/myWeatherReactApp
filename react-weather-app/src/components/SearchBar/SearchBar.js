@@ -1,8 +1,13 @@
 import React from 'react';
+import InputField from '../../elements/InputField';
+import Button from '../../elements/Button'
 
 const SearchBar = () =>{
     return(
-        <h2>This is the search bar</h2>
+        <div>
+            <InputField />
+            <Button />
+        </div>
     )
 }
 
