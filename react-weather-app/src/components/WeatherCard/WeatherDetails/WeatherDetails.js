@@ -4,7 +4,7 @@ import Temperature from '../WeatherDetails/Temperature/Temperature'
 
 const WeatherDetails = (props) =>{
     return(
-        <div>
+        <div className='weather card'>
             <Description>{props.weather.description}</Description>
             <Temperature>{props.weather.temperature}</Temperature>
         </div>

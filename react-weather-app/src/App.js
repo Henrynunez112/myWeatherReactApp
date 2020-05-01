@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import WeatherDiv from './components/WeatherCard/WeatherDiv'
+import WeatherDiv from './components/WeatherCard/WeatherDiv';
 
 
 

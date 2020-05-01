@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Header = () =>{
+const Header = (props) =>{
+    console.log(props)
     return (
-        <div>
-            <h3>This is where the header goes</h3>
+        <div style={{backgroundColor: props.color}}>
+            <h1>Henry's weather app</h1>
         </div>
     )
 };
