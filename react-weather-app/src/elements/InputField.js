@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
-const InputField = () =>{
-    return(
-        <div>
-            <input />
-        </div>
-    )
+const InputField = (props) => {
+  return (
+    <div>
+    <input
+        value={props.search}
+      />
+      
+    </div>
+  );
 };
 
 export default InputField;
