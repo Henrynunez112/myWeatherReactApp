@@ -44,17 +44,17 @@ const WeatherDiv = () => {
     }
   };
 
-  const handleError = () =>{
-    setSearch('');
+  const handleError = () => {
+    setSearch("");
     setWeather({});
-    setError(false)
-  }
+    setError(false);
+  };
 
   let cardDisplay = <Preview />;
   if (loading) {
     cardDisplay = <Loading />;
-  }else if(error){
-    cardDisplay = <ErrorPage onClick={handleError}/>
+  } else if (error) {
+    cardDisplay = <ErrorPage onClick={handleError} />;
   } else if (weather.description && weather.temperature !== "") {
     cardDisplay = <WeatherDetails data={weather} />;
   }
