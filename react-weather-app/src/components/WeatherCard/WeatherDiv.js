@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import WeatherDetails from "./WeatherDetails/WeatherDetails";
+import SearchBar from "../SearchBar/SearchBar";
+import Card from "../../elements/Card";
 import assetMapping from "../../assets/assetMapping.json";
 import Header from "../Header/Header";
 import axios from "axios";
+import WeatherDetails from "./WeatherDetails/WeatherDetails";
 const { REACT_APP_APIKEY } = process.env;
 
 const WeatherDiv = () => {
@@ -35,18 +37,22 @@ const WeatherDiv = () => {
     }
   };
 
+  let cardDisplay = <WeatherDetails data={weather} />;
+
   return (
     <div className="">
       <Header
         color={assetMapping.colors[error === true ? "error" : weather.color]}
       />
-      <main>
-        <input value={search} onChange={(e) => setSearch(e.target.value)} />
-        <button onClick={handleClick}>Search</button>
-        {weather.temperature && weather.description !== "" ? (
-          <WeatherDetails weather={weather} />
-        ) : null}
-      </main>
+      <SearchBar
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+        onClick={handleClick}
+      />
+      <Card>{cardDisplay}</Card>
+      {/* <button onClick={faren}>F</button> */}
     </div>
   );
 };

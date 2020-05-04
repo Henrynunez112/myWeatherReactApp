@@ -4,7 +4,9 @@ const InputField = (props) => {
   return (
     <div>
     <input
-        value={props.search}
+        value={props.value}
+        onChange={props.onChange}
+        placeholder={props.placeholder}
       />
       
     </div>
